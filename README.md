@@ -1,6 +1,6 @@
 # I-LAMM
 
-This repo implements iterative local adaptive majorize-minimization algorithm proposed by [Fan et al](https://doi.org/10.1214/17-AOS1568) based on my understanding.
+This repo implements iterative local adaptive majorize-minimization algorithm proposed by [Fan et al](https://doi.org/10.1214/17-AOS1568) based on my understanding and [ILAMM repo](https://github.com/XiaoouPan/ILAMM).
 
 ## Functions
 
