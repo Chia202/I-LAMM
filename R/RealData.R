@@ -61,10 +61,10 @@ for (i in 1:nrow(golub$x)) {
     X_train <- golub$x[-i, ]
     y_train <- golub$y[-i]
     
-    golub.glm <- coef(glmnet::cv.glmnet(X_train, y_train, family = "binomial", alpha = 1))
-    golub.lasso <- glm(X_train, y_train, 'logistic', penalty = "Lasso")
-    golub.scad <- glm(X_train, y_train, 'logistic', penalty = "SCAD")
-    golub.mcp <- glm(X_train, y_train, 'logistic', penalty = "MCP")
+    golub.glm <- coef(glmnet::glmnet(X_train, y_train, family = "binomial", alpha = 1, lambda = 0))
+    golub.lasso <- glmLambda(X_train, y_train, 'logistic', penalty = "Lasso", lambda = 8)$beta
+    golub.scad <- glmLambda(X_train, y_train, 'logistic', penalty = "SCAD", lambda = 8)$beta
+    golub.mcp <- glmLambda(X_train, y_train, 'logistic', penalty = "MCP", lambda = 8)$beta
     
     pred.p[i, 1] <- 1 / (1 + exp(-c(1, golub$x[i, ]) %*% golub.glm))
     pred.p[i, 2] <- 1 / (1 + exp(-c(1, golub$x[i, ]) %*% golub.lasso))
