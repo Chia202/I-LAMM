@@ -38,5 +38,7 @@ lr.mcp   <- glm(X, y, penalty = "MCP")
 ## Reference
 
 [1]. FAN J, LIU H, SUN Q, et al. I-LAMM for sparse learning: Simultaneous control of algorithmic complexity and statistical error[J]. The Annals of Statistics, 2018, 46(2): 814-841.
+
 [2]. WANG L, PENG B, BRADIC J, et al. A Tuning-free Robust and Eﬀicient Approach to High-dimensional Regression[J]. Journal of the American Statistical Association, 2020, 115(532): 1700-1714.
+
 [3]. ZHOU L, WANG B, ZOU H. Sparse Convoluted Rank Regression in High Dimensions[J]. Journal of the American Statistical Association, 2023, 0(0): 1-13.
