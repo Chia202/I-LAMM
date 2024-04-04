@@ -1,3 +1,8 @@
+library(ILAMM)
+library(glmnet)
+library(pROC)
+Rcpp::sourceCpp("./src/ILAMM.cpp") # Convoluted Rank Regression by ILAMM Algorithm and Metrics
+
 ######################## Linear Rgression    ########################
 load("../Data/eyedata.rda")
 
